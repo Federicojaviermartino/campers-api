@@ -1,5 +1,6 @@
 package com.example.demo.camper;
 
+import com.example.demo.signup.Signup;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

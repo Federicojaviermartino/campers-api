@@ -1,7 +1,7 @@
 package com.example.demo.signup;
 
-import com.backend.springproject.Activity.Activity;
-import com.backend.springproject.Camper.Camper;
+import com.example.demo.activity.Activity;
+import com.example.demo.camper.Camper;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

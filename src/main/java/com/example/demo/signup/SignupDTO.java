@@ -1,5 +1,7 @@
 package com.example.demo.signup;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
 @Data
@@ -14,5 +16,4 @@ public class SignupDTO {
 
     @Positive(message = "Time must be a positive number")
     private Integer time;
-}
 }
