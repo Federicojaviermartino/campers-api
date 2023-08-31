@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 public class ActivityService {
     private final ActivityInterface activityInterface;
     @Autowired
-    public ActivityInterface (ActivityInterface activityInterface {
+    public ActivityService(final ActivityInterface activityInterface){
         this.activityInterface = activityInterface;
     }
-    public Activity created(Activity activity) {
-        return ActivityInterface.save (activity) ;
-    };
+    public Activity create(Activity activity) {
+        return this.activityInterface.save(activity);
+    }
 }
