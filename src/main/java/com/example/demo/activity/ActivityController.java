@@ -8,9 +8,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping ("/activity")
+@RequestMapping (value = "activity",method = {
+        RequestMethod.GET,
+        RequestMethod.POST ,
+        RequestMethod.DELETE,
+        RequestMethod.PUT
+})
 public class ActivityController {
     private final ActivityService activityService;
     @Autowired
