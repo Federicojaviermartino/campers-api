@@ -1,6 +1,5 @@
 package com.example.demo.activity;
 
-import com.example.demo.signup.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +13,17 @@ public class ActivityService {
     }
     public Activity create(Activity activity) {
         return this.activityInterface.save(activity);
+    }
+
+    @Service
+    public static class ActivityService {
+        @Autowired
+        private ActivityRepository activityRepository;
+        @Autowired
+        private ModelMapper modelMapper;
+
+        public Activity addActivity(@Valid Activity activity){
+            return activityRepository.save(activity);
+        }
     }
 }

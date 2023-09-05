@@ -1,22 +1,20 @@
 package com.example.demo.camper;
 
-import com.example.demo.signup.Signup;
+import com.backend.springproject.signup.Signup;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
-import java.lang.annotation.Documented;
 import java.util.Set;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Entity
-@Table
+//@Table
 public class Camper {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +23,7 @@ public class Camper {
     @Column(name = "name")
     @NotNull(message = "Name is required")
     @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
-    private  String name;
+    private String name;
 
     @Column(name = "age")
     private  Number age;
@@ -43,4 +41,3 @@ public class Camper {
     @OneToMany(mappedBy = "camper")
     private Set<Signup> signups;
 }
-
